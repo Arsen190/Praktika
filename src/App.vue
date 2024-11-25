@@ -3,7 +3,8 @@
 </script>
 
 <template>
-<div class="container"></div>
+<div class="container">
+<div class="row">
     <div class="mb-3">
   <label for="name" class="form-label">Название </label>
   <input type="text" class="form-control" id="name">
@@ -20,7 +21,31 @@
   <label for="price" class="form-label">Цена</label>
   <input type="number" class="form-control" id="price">
 </div>
+<div class="button"></div>
+<button type="button" class="btn btn-success">Success</button>
+</div>
 
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col">
+    <div class="card H-100">
+      <div class="card-body">
+        <h5 class="card-title">HP</h5>
+        <p class="card-text">$1000</p>
+        <p class="card-text">X10</p>
+        <p class="card-text">25.11.2024</p>
+      </div>
+<div class="card-footer text end"></div>
+<button class="btn btn-outline-danger">Удалить</button>
+    </div>
+  </div>
+</div>
+<div class="row my-4">
+<div class="col">
+  <h3 class="text-end">Общая сумма товаров: $3000</h3>
+</div>
+</div>
+
+</div>
 
 </template>
 
