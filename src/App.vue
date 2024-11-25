@@ -1,5 +1,6 @@
 <script setup>
-import {ref} from "vue";
+import {ref,computed} from "vue";
+
 const products = ref([
 {
   id:1,
@@ -55,19 +56,27 @@ const totalSum = computed(() => {
 <div class="row">
     <div class="mb-3">
   <label for="name" class="form-label">Название </label>
-  <input type="text" v-model="name" class="form-control " id="name">
+  <input type="text" v-model="name" class="form-control" :class="{'is-invalid':!name}" id="name">
+  <div class="invalid-feedback"></div>
+  Заполните пожалуйста название 
 </div>
 <div class="mb-3">
   <label for="date" class="form-label">Дата</label>
-  <input type="date" v-model="date" class="form-control" id="date">
+  <input type="date" v-model="date" class="form-control" :class="{'is-invalid':!date}" id="date">
+  <div class="invalid-feedback"></div>
+  Заполните пожалуйста дату
 </div>
 <div class="mb-3">
   <label for="count" class="form-label">Количество</label>
-  <input type="number" v-model="count" class="form-control" id="count">
+  <input type="number" v-model="count" class="form-control" :class="{'is-invalid':!count}" id="count">
+  <div class="invalid-feedback"></div>
+  Заполните пожалуйста Количество
 </div>
 <div class="mb-3">
   <label for="price" class="form-label">Цена</label>
-  <input  type="number" v-model="price" class="form-control" id="price">
+  <input  type="number" v-model="price" class="form-control" :class="{'is-invalid':!price}" id="price">
+  <div class="invalid-feedback"></div>
+  Заполните пожалуйста цену
 </div>
 <div class="button"></div>
 <button @click="addProduct" type="button" class="btn btn-success my-5">Success</button>
